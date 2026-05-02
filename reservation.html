@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reservation - Studio Meraki</title>
+    <meta
+      name="description"
+      content="Reserver un cours de danse chez Studio Meraki pour adulte, adolescent ou enfant."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="booking-page">
+    <header class="site-header booking-header" data-header>
+      <a class="brand" href="index.html#accueil" aria-label="Studio Meraki - accueil">
+        <img src="Image Instagram 1080x1080.jpg" alt="Studio Meraki">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" data-menu-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="navigation" class="nav" data-nav>
+        <a href="index.html#cours">Cours</a>
+        <a href="index.html#planning">Planning</a>
+        <a href="index.html#tarifs">Tarifs</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="reservation-hero">
+        <div class="reservation-intro reveal">
+          <p class="eyebrow">Reservation</p>
+          <h1>Votre cours d'essai.</h1>
+          <p>
+            Remplissez la demande pour vous inscrire ou inscrire votre enfant.
+            Les informations pourront etre ajustees lors de la confirmation.
+          </p>
+        </div>
+        <form class="reservation-form reveal" data-reservation-form>
+          <div class="form-section">
+            <h2>Participant</h2>
+            <div class="segmented-control" role="group" aria-label="Type de participant">
+              <label>
+                <input type="radio" name="participant" value="adulte" checked data-participant-option>
+                <span>Adulte</span>
+              </label>
+              <label>
+                <input type="radio" name="participant" value="ado" data-participant-option>
+                <span>Ado</span>
+              </label>
+              <label>
+                <input type="radio" name="participant" value="enfant" data-participant-option>
+                <span>Enfant</span>
+              </label>
+            </div>
+            <div class="form-grid">
+              <label>
+                Nom du participant
+                <input type="text" name="student_name" placeholder="Nom et prenom" required>
+              </label>
+              <label>
+                Age
+                <input type="number" name="age" min="4" max="99" placeholder="Ex : 12" required>
+              </label>
+            </div>
+            <label class="guardian-field is-hidden" data-guardian-field>
+              Nom du responsable legal
+              <input type="text" name="guardian_name" placeholder="Parent ou tuteur">
+            </label>
+          </div>
+
+          <div class="form-section">
+            <h2>Cours souhaite</h2>
+            <div class="form-grid">
+              <label>
+                Discipline
+                <select name="dance_type" required>
+                  <option value="">Selectionner une danse</option>
+                  <option>Modern Jazz</option>
+                  <option>Street Jazz</option>
+                  <option>Street Latino</option>
+                  <option>Heels</option>
+                  <option>Comedie musicale</option>
+                  <option>Eveil & kids</option>
+                </select>
+              </label>
+              <label>
+                Niveau
+                <select name="level" required>
+                  <option value="">Selectionner un niveau</option>
+                  <option>Debutant</option>
+                  <option>Intermediaire</option>
+                  <option>Avance</option>
+                  <option>Je ne sais pas encore</option>
+                </select>
+              </label>
+              <label>
+                Formule
+                <select name="formula" required>
+                  <option>Cours d'essai</option>
+                  <option>Forfait annuel</option>
+                  <option>Carte 10 cours</option>
+                  <option>Stage / atelier</option>
+                </select>
+              </label>
+              <label>
+                Creneau prefere
+                <select name="slot" required>
+                  <option value="">Choisir un creneau</option>
+                  <option>Lundi - Modern Jazz Kids - 17:15</option>
+                  <option>Lundi - Heels debutant - 20:00</option>
+                  <option>Mardi - Street Jazz Ados - 18:00</option>
+                  <option>Mardi - Street Latino - 19:30</option>
+                  <option>Mercredi - Eveil danse - 10:00</option>
+                  <option>Mercredi - Comedie musicale - 14:00</option>
+                  <option>Jeudi - Modern Jazz Adultes - 19:00</option>
+                  <option>Jeudi - Street Jazz Adultes - 20:30</option>
+                  <option>Vendredi - Heels inter - 19:45</option>
+                  <option>Samedi - Atelier scene - 11:00</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Coordonnees</h2>
+            <div class="form-grid">
+              <label>
+                Email
+                <input type="email" name="email" placeholder="vous@email.com" required>
+              </label>
+              <label>
+                Telephone
+                <input type="tel" name="phone" placeholder="06 00 00 00 00" required>
+              </label>
+            </div>
+            <label>
+              Message
+              <textarea name="message" rows="4" placeholder="Besoin particulier, disponibilites, question..."></textarea>
+            </label>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            <span>J'accepte d'etre recontacte pour finaliser ma reservation.</span>
+          </label>
+
+          <button class="button button-dark" type="submit">Envoyer la demande</button>
+          <p class="form-confirmation" data-form-confirmation aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <img src="Image Instagram 1080x1080.jpg" alt="Studio Meraki">
+      <p>Studio Meraki - La bulle des arts.</p>
+      <a href="index.html#accueil">Retour au site</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

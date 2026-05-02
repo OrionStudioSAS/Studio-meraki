@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Studio Meraki - La bulle des arts</title>
+    <meta
+      name="description"
+      content="Studio Meraki, studio de danse feminin et artistique : modern jazz, street jazz, street latino, heels et comedie musicale."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#accueil" aria-label="Studio Meraki - accueil">
+        <img src="Image Instagram 1080x1080.jpg" alt="Studio Meraki">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" data-menu-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="navigation" class="nav" data-nav>
+        <a href="#histoire">Histoire</a>
+        <a href="#cours">Cours</a>
+        <a href="#planning">Planning</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#reservation">Reservation</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="accueil" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline poster="Image Instagram 1080x1080.jpg">
+          <source src="assets/hero-disco.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="sparkle-field" aria-hidden="true"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">La bulle des arts</p>
+          <h1>Studio Meraki</h1>
+          <p class="hero-copy">
+            Un studio de danse simple, lumineux et vibrant, pour apprendre, oser et briller a son rythme.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#planning">Voir le planning</a>
+            <a class="button button-ghost" href="reservation.html">Reserver un cours</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="histoire" class="section story">
+        <div class="section-kicker">Notre histoire</div>
+        <div class="story-grid">
+          <h2>Une bulle ou la danse devient confiance.</h2>
+          <div class="story-copy reveal">
+            <p>
+              Studio Meraki est ne de l'envie de creer un lieu chaleureux, artistique et exigeant,
+              ou chaque eleve trouve sa place. Ici, le mouvement se travaille avec precision,
+              mais toujours avec douceur, energie et plaisir.
+            </p>
+            <p>
+              Enfants, ados ou adultes, chacun vient developper sa technique, son style et sa
+              presence dans une ambiance bienveillante, feminine et scintillante.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="cours" class="section courses">
+        <div class="section-heading">
+          <p class="section-kicker">Les cours de danse</p>
+          <h2>Des disciplines pour tous les ages.</h2>
+        </div>
+        <div class="course-grid">
+          <article class="course-card reveal">
+            <span>01</span>
+            <h3>Modern Jazz</h3>
+            <p>Technique, musicalite, lignes et emotions pour construire une danse expressive.</p>
+            <small>Enfants, ados, adultes</small>
+          </article>
+          <article class="course-card reveal">
+            <span>02</span>
+            <h3>Street Jazz</h3>
+            <p>Une energie pop et urbaine, avec du rythme, du style et une vraie presence scene.</p>
+            <small>Ados, adultes</small>
+          </article>
+          <article class="course-card reveal">
+            <span>03</span>
+            <h3>Street Latino</h3>
+            <p>Des accents solaires, du groove et des choregraphies qui donnent envie de bouger.</p>
+            <small>Ados, adultes</small>
+          </article>
+          <article class="course-card reveal">
+            <span>04</span>
+            <h3>Heels</h3>
+            <p>Confiance, posture, lignes et attitude dans un cadre respectueux et elegant.</p>
+            <small>Adultes</small>
+          </article>
+          <article class="course-card reveal">
+            <span>05</span>
+            <h3>Comedie musicale</h3>
+            <p>Danse, interpretation et expression pour vivre la scene avec intensite.</p>
+            <small>Enfants, ados</small>
+          </article>
+          <article class="course-card reveal">
+            <span>06</span>
+            <h3>Eveil & kids</h3>
+            <p>Pour les 4-14 ans : coordination, imagination, rythme et premieres bases.</p>
+            <small>Enfants 4-14 ans</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="section ages">
+        <div class="age-pill reveal">
+          <strong>Enfants</strong>
+          <span>4-14 ans</span>
+        </div>
+        <div class="age-pill reveal">
+          <strong>Ados</strong>
+          <span>14-18 ans</span>
+        </div>
+        <div class="age-pill reveal">
+          <strong>Adultes</strong>
+          <span>A partir de 18 ans</span>
+        </div>
+      </section>
+
+      <section id="planning" class="section schedule-section">
+        <div class="section-heading">
+          <p class="section-kicker">Planning</p>
+          <h2>Une semaine pleine de mouvement.</h2>
+        </div>
+        <div class="schedule reveal">
+          <div class="day">
+            <h3>Lundi</h3>
+            <div class="class jazz"><strong>Modern Jazz Kids</strong><span>17:15 - 18:15</span></div>
+            <div class="class heels"><strong>Heels debutant</strong><span>20:00 - 21:15</span></div>
+          </div>
+          <div class="day">
+            <h3>Mardi</h3>
+            <div class="class street"><strong>Street Jazz Ados</strong><span>18:00 - 19:15</span></div>
+            <div class="class latino"><strong>Street Latino</strong><span>19:30 - 20:45</span></div>
+          </div>
+          <div class="day">
+            <h3>Mercredi</h3>
+            <div class="class kids"><strong>Eveil danse</strong><span>10:00 - 10:45</span></div>
+            <div class="class musical"><strong>Comedie musicale</strong><span>14:00 - 15:30</span></div>
+          </div>
+          <div class="day">
+            <h3>Jeudi</h3>
+            <div class="class jazz"><strong>Modern Jazz Adultes</strong><span>19:00 - 20:15</span></div>
+            <div class="class street"><strong>Street Jazz Adultes</strong><span>20:30 - 21:45</span></div>
+          </div>
+          <div class="day">
+            <h3>Vendredi</h3>
+            <div class="class latino"><strong>Street Latino Ados</strong><span>18:15 - 19:30</span></div>
+            <div class="class heels"><strong>Heels inter</strong><span>19:45 - 21:00</span></div>
+          </div>
+          <div class="day">
+            <h3>Samedi</h3>
+            <div class="class kids"><strong>Kids 4-7 ans</strong><span>09:45 - 10:30</span></div>
+            <div class="class musical"><strong>Atelier scene</strong><span>11:00 - 12:30</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tarifs" class="section prices">
+        <div class="section-heading">
+          <p class="section-kicker">Nos tarifs</p>
+          <h2>Des formules simples.</h2>
+        </div>
+        <div class="price-grid">
+          <article class="price-card reveal">
+            <p>Cours d'essai</p>
+            <strong>10 EUR</strong>
+            <span>Deduit en cas d'inscription</span>
+          </article>
+          <article class="price-card featured reveal">
+            <p>Forfait annuel</p>
+            <strong>320 EUR</strong>
+            <span>1 cours par semaine</span>
+          </article>
+          <article class="price-card reveal">
+            <p>Carte 10 cours</p>
+            <strong>150 EUR</strong>
+            <span>Valable 4 mois</span>
+          </article>
+          <article class="price-card reveal">
+            <p>Stage / atelier</p>
+            <strong>35 EUR</strong>
+            <span>Session ponctuelle</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="reservation" class="section booking-cta">
+        <div class="booking-copy reveal">
+          <p class="section-kicker">Reservation</p>
+          <h2>Choisir son cours, pour soi ou pour son enfant.</h2>
+          <p>
+            Selectionnez le profil, la discipline, le niveau et le creneau souhaite.
+            Le studio revient ensuite vers vous pour confirmer la place et finaliser l'inscription.
+          </p>
+          <a class="button button-light" href="reservation.html">Acceder a la reservation</a>
+        </div>
+        <div class="booking-steps reveal" aria-label="Etapes de reservation">
+          <div><span>01</span><strong>Profil</strong><small>Adulte, ado ou enfant</small></div>
+          <div><span>02</span><strong>Danse</strong><small>Modern jazz, heels, street...</small></div>
+          <div><span>03</span><strong>Creneau</strong><small>Essai ou inscription</small></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="contact-panel reveal">
+          <div>
+            <p class="section-kicker">Nous contacter</p>
+            <h2>Envie de rejoindre la bulle ?</h2>
+          </div>
+          <form>
+            <label>
+              Nom
+              <input type="text" name="name" placeholder="Votre nom">
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="vous@email.com">
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" placeholder="Cours souhaite, age, disponibilites..."></textarea>
+            </label>
+            <button class="button button-dark" type="submit">Envoyer</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="trouver" class="section location-social">
+        <div class="location reveal">
+          <p class="section-kicker">Nous trouver</p>
+          <h2>Studio Meraki</h2>
+          <p>12 rue de la Danse, 75000 Paris</p>
+          <p>Ouvert du lundi au samedi, sur les horaires des cours.</p>
+        </div>
+        <div class="social reveal">
+          <p class="section-kicker">Reseaux sociaux</p>
+          <h2>Suivre les coulisses</h2>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="TikTok">TikTok</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <img src="Image Instagram 1080x1080.jpg" alt="Studio Meraki">
+      <p>Studio Meraki - La bulle des arts.</p>
+      <a href="#accueil">Retour en haut</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
