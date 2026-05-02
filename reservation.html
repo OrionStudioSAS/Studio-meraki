@@ -39,6 +39,11 @@
             Remplissez la demande pour vous inscrire ou inscrire votre enfant.
             Les informations pourront etre ajustees lors de la confirmation.
           </p>
+          <div class="reservation-facts">
+            <div><strong>5 EUR</strong><span>Le cours d'essai</span></div>
+            <div><strong>2 essais</strong><span>Autorises par personne</span></div>
+            <div><strong>28/09</strong><span>Inscriptions officielles</span></div>
+          </div>
         </div>
         <form class="reservation-form reveal" data-reservation-form>
           <div class="form-section">
@@ -101,10 +106,16 @@
               <label>
                 Formule
                 <select name="formula" required>
-                  <option>Cours d'essai</option>
-                  <option>Forfait annuel</option>
-                  <option>Carte 10 cours</option>
-                  <option>Stage / atelier</option>
+                  <option>Cours d'essai - 5 EUR</option>
+                  <option>Enfant - 1 cours annuel - 200 EUR</option>
+                  <option>Enfant - 2 cours annuels - 350 EUR</option>
+                  <option>Enfant - 3 cours annuels - 500 EUR</option>
+                  <option>Ado/adulte sans gala - 1 cours - 230 EUR</option>
+                  <option>Ado/adulte sans gala - 2 cours - 410 EUR</option>
+                  <option>Ado/adulte sans gala - 3 cours - 590 EUR</option>
+                  <option>Ado/adulte avec gala - 1 cours - 250 EUR</option>
+                  <option>Ado/adulte avec gala - 2 cours - 450 EUR</option>
+                  <option>Ado/adulte avec gala - 3 cours - 650 EUR</option>
                 </select>
               </label>
               <label>
@@ -139,8 +150,18 @@
               </label>
             </div>
             <label>
+              Modalite de paiement envisagee
+              <select name="payment">
+                <option>A definir ensemble</option>
+                <option>Especes - 1 versement</option>
+                <option>Cheques - jusqu'a 4 cheques</option>
+                <option>Prelevement bancaire - jusqu'a 4 fois</option>
+                <option>Prelevement trimestriel - 3 fois</option>
+              </select>
+            </label>
+            <label>
               Message
-              <textarea name="message" rows="4" placeholder="Besoin particulier, disponibilites, question..."></textarea>
+              <textarea name="message" rows="4" placeholder="Besoin particulier, disponibilites, question, lien familial pour remise..."></textarea>
             </label>
           </div>
 
