@@ -1038,7 +1038,7 @@ textarea {
 .legal-header {
   margin-bottom: 56px;
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .legal-header h1 {
@@ -1047,6 +1047,7 @@ textarea {
   font-size: clamp(2.4rem, 6vw, 4rem);
   font-weight: 700;
   line-height: 1;
+  color: var(--black);
 }
 
 .legal-date {
@@ -1070,7 +1071,7 @@ textarea {
   font-family: "Fredoka", "Arial Rounded MT Bold", Arial, sans-serif;
   font-size: clamp(1.3rem, 3vw, 1.7rem);
   font-weight: 600;
-  color: var(--white);
+  color: var(--black);
 }
 
 .legal-section h3 {
@@ -1085,7 +1086,7 @@ textarea {
 .legal-section p,
 .legal-section li {
   margin: 0;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(0, 0, 0, 0.7);
   font-size: 0.97rem;
   line-height: 1.7;
 }
@@ -1117,14 +1118,14 @@ textarea {
 .legal-table td {
   padding: 12px 16px;
   text-align: left;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.78);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .legal-table th {
   font-weight: 700;
-  color: var(--white);
-  background: rgba(255, 255, 255, 0.06);
+  color: var(--black);
+  background: rgba(0, 0, 0, 0.04);
 }
 
 .booking-cta {
