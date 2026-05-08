@@ -1009,6 +1009,124 @@ textarea {
   font-weight: 900;
 }
 
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 20px;
+  font-size: 0.88rem;
+}
+
+.footer-legal a {
+  font-weight: 500;
+  opacity: 0.7;
+  transition: opacity 180ms ease;
+}
+
+.footer-legal a:hover {
+  opacity: 1;
+}
+
+/* ── Pages légales ───────────────────────────────────────────── */
+
+.legal-page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: clamp(100px, 14vw, 160px) clamp(20px, 6vw, 56px) clamp(60px, 10vw, 120px);
+}
+
+.legal-header {
+  margin-bottom: 56px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.legal-header h1 {
+  margin: 8px 0 0;
+  font-family: "Fredoka", "Arial Rounded MT Bold", Arial, sans-serif;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.legal-date {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.legal-content {
+  display: grid;
+  gap: 48px;
+}
+
+.legal-section {
+  display: grid;
+  gap: 14px;
+}
+
+.legal-section h2 {
+  margin: 0;
+  font-family: "Fredoka", "Arial Rounded MT Bold", Arial, sans-serif;
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  font-weight: 600;
+  color: var(--white);
+}
+
+.legal-section h3 {
+  margin: 8px 0 4px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.legal-section p,
+.legal-section li {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+.legal-section ul {
+  margin: 0;
+  padding-left: 1.4em;
+  display: grid;
+  gap: 6px;
+}
+
+.legal-section a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  opacity: 0.85;
+}
+
+.legal-section a:hover {
+  opacity: 1;
+}
+
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.94rem;
+}
+
+.legal-table th,
+.legal-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.legal-table th {
+  font-weight: 700;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
 .booking-cta {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.86fr);
