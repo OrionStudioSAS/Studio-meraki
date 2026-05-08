@@ -383,9 +383,9 @@ h3 {
 }
 
 .course-card h3 {
-  max-width: 10ch;
+  max-width: 12ch;
   margin-bottom: 14px;
-  font-size: clamp(2.25rem, 4vw, 4rem);
+  font-size: clamp(2rem, 3.4vw, 3.6rem);
 }
 
 .course-card p {
@@ -400,56 +400,98 @@ h3 {
   text-transform: uppercase;
 }
 
-.ages {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  padding-top: 0;
+.teachers {
   background: var(--black);
 }
 
-.age-card {
+.teacher-grid {
   display: grid;
-  align-content: space-between;
-  min-height: 300px;
-  padding: clamp(24px, 3vw, 34px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background:
-    radial-gradient(circle at 82% 16%, rgba(255, 255, 255, 0.16), transparent 28%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025));
-  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
-.age-card:hover {
+.teacher-card {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.78fr) minmax(0, 1fr);
+  min-height: 420px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  transition: transform 220ms ease, border-color 220ms ease;
+}
+
+.teacher-card:hover {
   transform: translateY(-6px);
   border-color: rgba(255, 255, 255, 0.32);
-  background:
-    radial-gradient(circle at 82% 16%, rgba(255, 159, 188, 0.2), transparent 28%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.035));
 }
 
-.age-card span {
-  margin-bottom: 54px;
+.teacher-photo {
+  min-height: 100%;
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.36)),
+    var(--teacher-image);
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(0.12);
+  transition: filter 220ms ease, transform 700ms ease;
+}
+
+.teacher-card:hover .teacher-photo {
+  filter: grayscale(0);
+  transform: scale(1.04);
+}
+
+.teacher-info {
+  display: grid;
+  align-content: end;
+  padding: clamp(28px, 4vw, 48px);
+  background:
+    radial-gradient(circle at 88% 16%, rgba(255, 255, 255, 0.16), transparent 26%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+}
+
+.teacher-dot {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 42px;
+  border-radius: 50%;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.teacher-dot.laura,
+.teacher-tag.laura::before {
+  background: #ef7786;
+}
+
+.teacher-dot.presci,
+.teacher-tag.presci::before {
+  background: #f6c84f;
+}
+
+.teacher-dot.both,
+.teacher-tag.both::before {
+  background: #6bc24a;
+}
+
+.teacher-info p {
+  margin-bottom: 10px;
   color: var(--rose);
   font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.age-card strong {
+.teacher-info h3 {
   font-family: "Fredoka", "Arial Rounded MT Bold", Arial, sans-serif;
-  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  font-size: clamp(2rem, 4.5vw, 4rem);
   line-height: 0.9;
 }
 
-.age-card p {
-  margin: 18px 0 26px;
-  color: rgba(255, 255, 255, 0.68);
-}
-
-.age-card small {
+.teacher-info small {
+  max-width: 520px;
   color: rgba(255, 255, 255, 0.82);
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .opening {
@@ -540,7 +582,7 @@ h3 {
 .class {
   position: relative;
   display: grid;
-  gap: 8px;
+  gap: 6px;
   min-height: 116px;
   margin-bottom: 12px;
   padding: 16px;
@@ -559,7 +601,9 @@ h3 {
 }
 
 .class strong,
-.class span {
+.class small,
+.class span,
+.teacher-tag {
   position: relative;
   z-index: 1;
 }
@@ -574,6 +618,37 @@ h3 {
   align-self: end;
   font-size: 0.84rem;
   font-weight: 900;
+}
+
+.class small {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.teacher-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  margin-top: 2px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--black);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.teacher-tag::before {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  content: "";
 }
 
 .jazz {
@@ -598,6 +673,30 @@ h3 {
 
 .musical {
   background: var(--sky);
+}
+
+.glam {
+  background: #e00000;
+  color: var(--white);
+}
+
+.loisirs {
+  background: #169bd5;
+  color: var(--white);
+}
+
+.technique {
+  background: #435bb6;
+  color: var(--white);
+}
+
+.compagnie {
+  background: #9820ad;
+  color: var(--white);
+}
+
+.broadway {
+  background: #bfd12b;
 }
 
 .price-grid {
@@ -654,12 +753,8 @@ h3 {
   align-content: start;
   min-height: 100%;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  background: #fbfaf8;
-}
-
-.pricing-table.featured {
-  background: var(--black);
-  color: var(--white);
+  background: var(--white);
+  color: var(--black);
 }
 
 .pricing-title {
@@ -667,10 +762,6 @@ h3 {
   gap: 8px;
   padding: 28px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-}
-
-.featured .pricing-title {
-  border-color: rgba(255, 255, 255, 0.16);
 }
 
 .pricing-title p {
@@ -682,12 +773,14 @@ h3 {
   line-height: 0.95;
 }
 
-.featured .pricing-title p {
-  color: var(--white);
+.pricing-title p small {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 500;
+  opacity: 0.55;
 }
 
 .pricing-title span {
-  color: #6b6560;
+  color: rgba(0, 0, 0, 0.5);
   font-weight: 800;
 }
 
@@ -698,23 +791,14 @@ h3 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.featured .price-row {
-  border-color: rgba(255, 255, 255, 0.14);
-}
-
 .price-row:last-child {
   border-bottom: 0;
 }
 
 .price-row strong {
-  color: #6b6560;
+  color: rgba(0, 0, 0, 0.55);
   font-weight: 900;
   text-transform: uppercase;
-}
-
-.featured .price-row strong,
-.featured .pricing-title span {
-  color: rgba(255, 255, 255, 0.68);
 }
 
 .price-row span {
@@ -725,17 +809,9 @@ h3 {
   line-height: 0.9;
 }
 
-.featured .price-row span {
-  color: var(--white);
-}
-
 .price-row small {
-  color: #6b6560;
+  color: rgba(0, 0, 0, 0.5);
   font-weight: 800;
-}
-
-.featured .price-row small {
-  color: rgba(255, 255, 255, 0.62);
 }
 
 .pricing-notes {
@@ -766,20 +842,62 @@ h3 {
 
 .payment-terms {
   display: grid;
-  gap: 16px;
-  margin-top: 18px;
-  padding: 28px;
-  background: var(--black);
-  color: var(--white);
+  grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(20px, 4vw, 46px);
+  margin-top: 22px;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background:
+    radial-gradient(circle at 8% 8%, rgba(255, 159, 188, 0.22), transparent 22%),
+    #fbfaf8;
+  color: var(--black);
 }
 
-.payment-terms ul {
+.payment-heading {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.payment-heading .section-kicker {
+  color: rgba(0, 0, 0, 0.46);
+}
+
+.payment-heading h3 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.7rem);
+  line-height: 0.92;
+}
+
+.payment-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px 28px;
-  margin: 0;
-  padding-left: 20px;
-  color: rgba(255, 255, 255, 0.76);
+  gap: 12px;
+}
+
+.payment-grid article {
+  display: grid;
+  gap: 10px;
+  min-height: 168px;
+  padding: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--white);
+}
+
+.payment-grid span {
+  color: var(--rose);
+  font-weight: 900;
+}
+
+.payment-grid strong {
+  font-family: "Fredoka", "Arial Rounded MT Bold", Arial, sans-serif;
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.payment-grid small {
+  align-self: end;
+  color: #625c57;
   font-weight: 700;
 }
 
@@ -1154,7 +1272,8 @@ textarea {
 
   .booking-cta,
   .reservation-hero,
-  .opening {
+  .opening,
+  .payment-terms {
     grid-template-columns: 1fr;
   }
 
@@ -1246,7 +1365,7 @@ textarea {
   .contact-panel,
   .location-social,
   .form-grid,
-  .payment-terms ul {
+  .payment-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1254,7 +1373,7 @@ textarea {
   .price-grid,
   .pricing-layout,
   .pricing-notes,
-  .ages,
+  .teacher-grid,
   .reservation-facts {
     grid-template-columns: 1fr;
   }
@@ -1267,8 +1386,13 @@ textarea {
     font-size: clamp(2.7rem, 14vw, 4.2rem);
   }
 
-  .age-card {
+  .teacher-card {
+    grid-template-columns: 1fr;
     min-height: 260px;
+  }
+
+  .teacher-photo {
+    min-height: 340px;
   }
 
   .footer {
@@ -1296,6 +1420,10 @@ textarea {
   .opening-card,
   .payment-terms {
     padding: 20px;
+  }
+
+  .teacher-photo {
+    min-height: 300px;
   }
 
   .pricing-title,
