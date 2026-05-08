@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Reservation - Studio Meraki</title>
+    <title>Réservation - Studio Meraki</title>
     <meta
       name="description"
-      content="Reserver un cours de danse chez Studio Meraki pour adulte, adolescent ou enfant."
+      content="Réserver un cours de danse chez Studio Meraki pour adulte, adolescent ou enfant."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,15 +33,15 @@
     <main>
       <section class="reservation-hero">
         <div class="reservation-intro reveal">
-          <p class="eyebrow">Reservation</p>
+          <p class="eyebrow">Réservation</p>
           <h1>Votre cours d'essai.</h1>
           <p>
             Remplissez la demande pour vous inscrire ou inscrire votre enfant.
-            Les informations pourront etre ajustees lors de la confirmation.
+            Les informations pourront être ajustées lors de la confirmation.
           </p>
           <div class="reservation-facts">
             <div><strong>5 EUR</strong><span>Le cours d'essai</span></div>
-            <div><strong>2 essais</strong><span>Autorises par personne</span></div>
+            <div><strong>2 essais</strong><span>Autorisés par personne</span></div>
             <div><strong>28/09</strong><span>Inscriptions officielles</span></div>
           </div>
         </div>
@@ -65,41 +65,48 @@
             <div class="form-grid">
               <label>
                 Nom du participant
-                <input type="text" name="student_name" placeholder="Nom et prenom" required>
+                <input type="text" name="student_name" placeholder="Nom et prénom" required>
               </label>
               <label>
-                Age
+                Âge
                 <input type="number" name="age" min="4" max="99" placeholder="Ex : 12" required>
               </label>
             </div>
             <label class="guardian-field is-hidden" data-guardian-field>
-              Nom du responsable legal
+              Nom du responsable légal
               <input type="text" name="guardian_name" placeholder="Parent ou tuteur">
             </label>
           </div>
 
           <div class="form-section">
-            <h2>Cours souhaite</h2>
+            <h2>Cours souhaité</h2>
             <div class="form-grid">
               <label>
                 Discipline
                 <select name="dance_type" required>
-                  <option value="">Selectionner une danse</option>
+                  <option value="">Sélectionner une danse</option>
                   <option>Modern Jazz</option>
                   <option>Street Jazz</option>
                   <option>Street Latino</option>
                   <option>Heels</option>
-                  <option>Comedie musicale</option>
-                  <option>Eveil & kids</option>
+                  <option>Comédie musicale</option>
+                  <option>Éveil</option>
+                  <option>Initiation</option>
+                  <option>Glam</option>
+                  <option>Loisirs</option>
+                  <option>Broadway</option>
+                  <option>Technique</option>
+                  <option>Pré-compagnie</option>
+                  <option>Compagnie</option>
                 </select>
               </label>
               <label>
                 Niveau
                 <select name="level" required>
-                  <option value="">Selectionner un niveau</option>
-                  <option>Debutant</option>
-                  <option>Intermediaire</option>
-                  <option>Avance</option>
+                  <option value="">Sélectionner un niveau</option>
+                  <option>Débutant</option>
+                  <option>Intermédiaire</option>
+                  <option>Avancé</option>
                   <option>Je ne sais pas encore</option>
                 </select>
               </label>
@@ -119,55 +126,73 @@
                 </select>
               </label>
               <label>
-                Creneau prefere
+                Créneau préféré
                 <select name="slot" required>
-                  <option value="">Choisir un creneau</option>
-                  <option>Lundi - Modern Jazz Kids - 17:15</option>
-                  <option>Lundi - Heels debutant - 20:00</option>
-                  <option>Mardi - Street Jazz Ados - 18:00</option>
-                  <option>Mardi - Street Latino - 19:30</option>
-                  <option>Mercredi - Eveil danse - 10:00</option>
-                  <option>Mercredi - Comedie musicale - 14:00</option>
-                  <option>Jeudi - Modern Jazz Adultes - 19:00</option>
-                  <option>Jeudi - Street Jazz Adultes - 20:30</option>
-                  <option>Vendredi - Heels inter - 19:45</option>
-                  <option>Samedi - Atelier scene - 11:00</option>
+                  <option value="">Choisir un créneau</option>
+                  <option>Lundi - Comédie musicale enfants 10-15 ans - 18:45</option>
+                  <option>Lundi - Comédie musicale ados-adultes 15 ans et + - 19:45</option>
+                  <option>Lundi - Modern Jazz adultes - 21:00</option>
+                  <option>Mardi - Modern Jazz 11-13 ans - 17:00</option>
+                  <option>Mardi - Modern Jazz 13-15 ans - 18:00</option>
+                  <option>Mardi - Modern Jazz 15-18 ans - 19:00</option>
+                  <option>Mardi - Loisirs ados-adultes 15 ans et + - 20:15</option>
+                  <option>Mercredi - Éveil 4 ans - 10:30</option>
+                  <option>Mercredi - Initiation 5-6 ans - 11:30</option>
+                  <option>Mercredi - Initiation 6-7 ans - 13:15</option>
+                  <option>Mercredi - Initiation 7-8 ans - 14:15</option>
+                  <option>Mercredi - Initiation 9-10 ans - 15:15</option>
+                  <option>Mercredi - Street Jazz enfants - 16:15</option>
+                  <option>Mercredi - Modern Jazz 15-18 ans - 17:15</option>
+                  <option>Mercredi - Street Jazz 15-18 ans - 18:30</option>
+                  <option>Mercredi - Street Jazz adultes - 19:45</option>
+                  <option>Mercredi - Heels adultes - 21:00</option>
+                  <option>Jeudi - Street Jazz 11-13 ans - 17:30</option>
+                  <option>Jeudi - Street Latino ados-adultes 15 ans et + - 18:30</option>
+                  <option>Jeudi - Glam adultes - 19:45</option>
+                  <option>Jeudi - Heels adultes - 21:00</option>
+                  <option>Vendredi - Street Jazz 13-15 ans - 17:30</option>
+                  <option>Vendredi - Street Jazz adultes - 18:30</option>
+                  <option>Vendredi - Broadway ados-adultes 15 ans et + - 19:45</option>
+                  <option>Vendredi - Modern Jazz adultes - 21:00</option>
+                  <option>Samedi - Pré-compagnie - 13:45</option>
+                  <option>Samedi - Technique ados-adultes 15 ans et + - 14:45</option>
+                  <option>Samedi - Compagnie - 16:00</option>
                 </select>
               </label>
             </div>
           </div>
 
           <div class="form-section">
-            <h2>Coordonnees</h2>
+            <h2>Coordonnées</h2>
             <div class="form-grid">
               <label>
                 Email
                 <input type="email" name="email" placeholder="vous@email.com" required>
               </label>
               <label>
-                Telephone
+                Téléphone
                 <input type="tel" name="phone" placeholder="06 00 00 00 00" required>
               </label>
             </div>
             <label>
-              Modalite de paiement envisagee
+              Modalité de paiement envisagée
               <select name="payment">
-                <option>A definir ensemble</option>
-                <option>Especes - 1 versement</option>
-                <option>Cheques - jusqu'a 4 cheques</option>
-                <option>Prelevement bancaire - jusqu'a 4 fois</option>
-                <option>Prelevement trimestriel - 3 fois</option>
+                <option>À définir ensemble</option>
+                <option>Espèces - 1 versement</option>
+                <option>Chèques - jusqu'à 4 chèques</option>
+                <option>Prélèvement bancaire - jusqu'à 4 fois</option>
+                <option>Prélèvement trimestriel - 3 fois</option>
               </select>
             </label>
             <label>
               Message
-              <textarea name="message" rows="4" placeholder="Besoin particulier, disponibilites, question, lien familial pour remise..."></textarea>
+              <textarea name="message" rows="4" placeholder="Besoin particulier, disponibilités, question, lien familial pour remise..."></textarea>
             </label>
           </div>
 
           <label class="consent">
             <input type="checkbox" name="consent" required>
-            <span>J'accepte d'etre recontacte pour finaliser ma reservation.</span>
+            <span>J'accepte d'être recontacté pour finaliser ma réservation.</span>
           </label>
 
           <button class="button button-dark" type="submit">Envoyer la demande</button>

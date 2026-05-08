@@ -60,7 +60,7 @@ syncGuardianField();
 if (reservationForm) {
   reservationForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    formConfirmation.textContent = "Merci, votre demande est prete a etre confirmee par le studio.";
+    formConfirmation.textContent = "Merci, votre demande est prête à être confirmée par le studio.";
     reservationForm.reset();
     syncGuardianField();
   });
