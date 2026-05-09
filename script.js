@@ -1,3 +1,10 @@
+// ── Hero video autoplay fallback (Safari) ────────────────────
+const heroVideo = document.querySelector(".hero-video");
+if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.play().catch(() => {});
+}
+
 // ── Lenis smooth scroll ───────────────────────────────────────
 const lenis = new Lenis({
   duration: 1.2,
