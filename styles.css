@@ -314,7 +314,9 @@ h3 {
   display: grid;
   gap: 16px;
   width: min(900px, 100%);
+  margin-inline: auto;
   margin-bottom: clamp(34px, 6vw, 70px);
+  text-align: center;
 }
 
 .course-grid,
@@ -520,10 +522,6 @@ h3 {
   color: rgba(255, 255, 255, 0.72);
   font-size: 1rem;
   line-height: 1.65;
-  text-align: center;
-}
-
-.section-heading {
   text-align: center;
 }
 
