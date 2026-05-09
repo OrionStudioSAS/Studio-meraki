@@ -3,10 +3,29 @@ const heroVideo = document.querySelector(".hero-video");
 if (heroVideo) {
   heroVideo.muted = true;
   heroVideo.setAttribute("playsinline", "");
+  heroVideo.setAttribute("webkit-playsinline", "");
+
   const tryPlay = () => heroVideo.play().catch(() => {});
+
+  // Tentative immédiate
   tryPlay();
+
+  // Dès que la vidéo est prête
   heroVideo.addEventListener("canplay", tryPlay, { once: true });
-  heroVideo.addEventListener("loadedmetadata", tryPlay, { once: true });
+
+  // Fallback : premier geste de l'utilisateur sur la page
+  const playOnInteraction = () => {
+    heroVideo.play().catch(() => {});
+    document.removeEventListener("click", playOnInteraction);
+    document.removeEventListener("touchstart", playOnInteraction);
+    document.removeEventListener("keydown", playOnInteraction);
+    document.removeEventListener("scroll", playOnInteraction);
+  };
+
+  document.addEventListener("click", playOnInteraction, { passive: true });
+  document.addEventListener("touchstart", playOnInteraction, { passive: true });
+  document.addEventListener("keydown", playOnInteraction, { passive: true });
+  document.addEventListener("scroll", playOnInteraction, { passive: true });
 }
 
 // ── Lenis smooth scroll ───────────────────────────────────────
