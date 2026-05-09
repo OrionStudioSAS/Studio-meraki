@@ -3,11 +3,86 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Studio Meraki - La bulle des arts</title>
-    <meta
-      name="description"
-      content="Studio Meraki, studio de danse à Aubière (63) : modern, street, street latino, heels, comédie musicale, glam, broadway et loisirs."
-    >
+
+    <!-- SEO principal -->
+    <title>Studio Meraki — Cours de danse à Aubière (63) | Modern, Street, Heels</title>
+    <meta name="description" content="Studio Meraki, studio de danse à Aubière (Puy-de-Dôme). Cours de modern, street, street latino, heels, comédie musicale, glam et broadway pour enfants, ados et adultes. Ouverture septembre 2026.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Studio Meraki">
+    <link rel="canonical" href="https://studio-meraki.fr/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Studio Meraki">
+    <meta property="og:title" content="Studio Meraki — Cours de danse à Aubière (63)">
+    <meta property="og:description" content="Studio de danse à Aubière (63) : modern, street, heels, comédie musicale, glam, broadway. Cours pour enfants, ados et adultes. Ouverture septembre 2026.">
+    <meta property="og:url" content="https://studio-meraki.fr/">
+    <meta property="og:image" content="https://studio-meraki.fr/assets/logo.webp">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:image:alt" content="Logo Studio Meraki">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Studio Meraki — Cours de danse à Aubière (63)">
+    <meta name="twitter:description" content="Studio de danse à Aubière (63) : modern, street, heels, comédie musicale. Ouverture septembre 2026.">
+    <meta name="twitter:image" content="https://studio-meraki.fr/assets/logo.webp">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["EducationalOrganization", "LocalBusiness"],
+      "name": "Studio Meraki",
+      "legalName": "Studio Meraki",
+      "description": "Studio de danse à Aubière (Puy-de-Dôme) proposant des cours de modern, street, street latino, heels, comédie musicale, glam, broadway, loisirs et technique pour enfants, ados et adultes.",
+      "url": "https://studio-meraki.fr",
+      "logo": "https://studio-meraki.fr/assets/logo.webp",
+      "image": "https://studio-meraki.fr/assets/logo.webp",
+      "email": "mail.studiomeraki@gmail.com",
+      "foundingDate": "2026",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "15 avenue du Roussillon",
+        "addressLocality": "Aubière",
+        "postalCode": "63170",
+        "addressRegion": "Puy-de-Dôme",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.7505,
+        "longitude": 3.1094
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "18:45", "closes": "22:15" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "17:00", "closes": "21:30" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "10:30", "closes": "22:15" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "17:30", "closes": "22:15" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "17:30", "closes": "21:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "13:45", "closes": "17:30" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Cours de danse",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Modern", "description": "Cours de modern jazz pour enfants, ados et adultes" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Street", "description": "Cours de street jazz pour enfants, ados et adultes" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Street Latino", "description": "Cours de street latino pour ados et adultes" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Comédie Musicale", "description": "Cours de comédie musicale pour enfants, ados et adultes" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Heels", "description": "Cours de heels pour adultes" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Glam", "description": "Cours de glam pour adultes" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Broadway", "description": "Cours de broadway pour ados et adultes" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Loisirs", "description": "Cours loisirs pour ados et adultes" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Technique", "description": "Cours de technique pour ados et adultes" } }
+        ]
+      },
+      "sameAs": []
+    }
+    </script>
+
+    <!-- Fonts & styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,7 +91,10 @@
   <body>
     <header class="site-header" data-header>
       <a class="brand" href="#accueil" aria-label="Studio Meraki - accueil">
-        <img src="Image Instagram 1080x1080.jpg" alt="Studio Meraki">
+        <picture>
+          <source srcset="assets/logo.webp" type="image/webp">
+          <img src="Image Instagram 1080x1080.jpg" alt="Logo Studio Meraki" width="78" height="78" fetchpriority="high">
+        </picture>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" data-menu-toggle>
         <span></span>
@@ -82,63 +160,63 @@
           <h2>Des disciplines pour tous les âges.</h2>
         </div>
         <div class="course-grid course-gallery">
-          <article class="course-card reveal" style="--course-image: url('assets/MODERN%20JAZZ.png');">
+          <article class="course-card reveal" style="--course-image: url('assets/MODERN.webp');">
             <div class="course-content">
               <span>01</span>
               <h3>Modern</h3>
               <p>Un espace pour ressentir, se perfectionner et s'exprimer pleinement, en travaillant fluidité, conscience corporelle et qualité de mouvement. Pour les enfants, le modern encourage aussi la créativité, la motricité et la liberté d'expression avec douceur et sensibilité.</p>
             </div>
           </article>
-          <article class="course-card reveal" style="--course-image: url('assets/STREET.png');">
+          <article class="course-card reveal" style="--course-image: url('assets/STREET.webp');">
             <div class="course-content">
               <span>02</span>
               <h3>Street</h3>
               <p>Énergie, musicalité, coordination et bonnes vibes : ici, on apprend à s'exprimer avec précision tout en laissant parler sa personnalité. Pour les enfants, c'est un super terrain de jeu pour développer confiance, rythme et expression, le tout dans la bonne humeur.</p>
             </div>
           </article>
-          <article class="course-card reveal" style="--course-image: url('assets/STREET%20LATINO.png');">
+          <article class="course-card reveal" style="--course-image: url('assets/STREET-LATINO.webp');">
             <div class="course-content">
               <span>03</span>
               <h3>Street Latino</h3>
               <p>Une discipline solaire et dynamique où l'on travaille rythme, coordination et musicalité, tout en apprenant à lâcher prise, prendre confiance et profiter pleinement de l'énergie du moment.</p>
             </div>
           </article>
-          <article class="course-card reveal" style="--course-image: url('assets/COM%C3%89DIE%20MUSICALE.png');">
+          <article class="course-card reveal" style="--course-image: url('assets/COMEDIE-MUSICALE.webp');">
             <div class="course-content">
               <span>04</span>
               <h3>Comédie Musicale</h3>
               <p>Un univers vivant et pétillant pour danser, chanter, interpréter et s'amuser : ici, on apprend à prendre sa place, à gagner en confiance et à raconter des histoires avec le corps, la voix et l'énergie du cœur. Pour les enfants, c'est une bulle d'expression où l'on développe imagination, aisance et confiance en soi tout en s'amusant.</p>
             </div>
           </article>
-          <article class="course-card reveal" style="--course-image: url('assets/HEELS.png');">
+          <article class="course-card reveal" style="--course-image: url('assets/HEELS.webp');">
             <div class="course-content">
               <span>05</span>
               <h3>Heels</h3>
               <p>Posture, équilibre, démarche, attitude… le heels aide à gagner en assurance, à affirmer son style et à révéler sa puissance à travers le mouvement (et quelques claquements de talons).</p>
             </div>
           </article>
-          <article class="course-card reveal" style="--course-image: url('assets/GLAM.png');">
+          <article class="course-card reveal" style="--course-image: url('assets/GLAM.webp');">
             <div class="course-content">
               <span>06</span>
               <h3>Glam</h3>
               <p>Un travail tout en fluidité, précision et élégance pour trouver assurance et féminité avec naturel et authenticité. Le Glam c'est apprendre à habiter chaque mouvement avec grâce, confiance et ce petit supplément d'âme qui fait toute la différence.</p>
             </div>
           </article>
-          <article class="course-card reveal" style="--course-image: url('assets/BROADWAY.png');">
+          <article class="course-card reveal" style="--course-image: url('assets/BROADWAY.webp');">
             <div class="course-content">
               <span>07</span>
               <h3>Broadway</h3>
               <p>Du show, de l'énergie et une touche de paillettes : le Broadway mêle technique, musicalité et expression scénique pour apprendre à prendre sa place, oser et briller.</p>
             </div>
           </article>
-          <article class="course-card reveal" style="--course-image: url('assets/LOISIRS.png');">
+          <article class="course-card reveal" style="--course-image: url('assets/LOISIRS.webp');">
             <div class="course-content">
               <span>08</span>
               <h3>Loisirs</h3>
               <p>Un cours pensé pour découvrir, tester et s'amuser à travers différents styles de danse, dans une ambiance légère, bienveillante et sans pression. Ici, pas d'obligation de gala ni de performance : juste le plaisir de danser, d'explorer de nouveaux univers, de gagner en confiance et de partager un bon moment, à son rythme et en toute simplicité.</p>
             </div>
           </article>
-          <article class="course-card reveal" style="--course-image: url('assets/TECHNIQUE.png');">
+          <article class="course-card reveal" style="--course-image: url('assets/TECHNIQUE.webp');">
             <div class="course-content">
               <span>09</span>
               <h3>Technique</h3>
@@ -146,7 +224,7 @@
             </div>
           </article>
         </div>
-        <div class="compagnie-note reveal" style="--compagnie-image: url('assets/LES%20COMPAGNIES%20MERAKI.png');">
+        <div class="compagnie-note reveal" style="--compagnie-image: url('assets/COMPAGNIES.webp');">
           <div class="compagnie-note-inner">
             <p class="section-kicker">Pré-compagnie &amp; Compagnie</p>
             <p>Accessible sur audition, la pré-compagnie (collégiens) et la compagnie (lycéens/adultes) s'adressent aux danseurs et danseuses prêts à s'engager davantage et à pousser leur pratique plus loin. À travers un travail technique et artistique, ces groupes permettent de se perfectionner, d'enrichir son expérience scénique et de participer à des projets (concours et créations). C'est un espace d'évolution où l'on apprend à se dépasser, à affiner ses qualités de danseur et à grandir dans une dynamique collective motivante et engagée.</p>
@@ -161,7 +239,7 @@
           <p class="teachers-intro">Nous sommes deux sœurs et nous avons grandi ensemble avec une passion commune : les arts de la scène. Très proches et complémentaires, nous partageons la même vision de l'enseignement : exigeante, artistique et profondément humaine.</p>
         </div>
         <div class="teacher-grid">
-          <article class="teacher-card reveal" style="--teacher-image: url('assets/Photo%20-%20LAURA.JPG');">
+          <article class="teacher-card reveal" style="--teacher-image: url('assets/LAURA.webp');">
             <div class="teacher-photo" aria-hidden="true"></div>
             <div class="teacher-info">
               <div class="teacher-roles laura">
@@ -172,7 +250,7 @@
               <small>Si Laura était une chanson, ce serait une mélodie douce et intense à la fois. Si elle était un mouvement, ce serait quelque chose de fluide, instinctif, vivant. Elle est sensible aux émotions, à la musicalité, à ce qui relie les personnes entre elles à travers l'art. Au studio, elle souhaite transmettre la liberté d'oser, de ressentir et d'exprimer sa personnalité sans jugement. Entre danse, chant et interprétation, elle aime créer des moments humains, spontanés et inspirants, où chacun peut trouver sa place et sa voix.</small>
             </div>
           </article>
-          <article class="teacher-card reveal" style="--teacher-image: url('assets/Photo%20-%20PR%C3%89SCI.jpg');">
+          <article class="teacher-card reveal" style="--teacher-image: url('assets/PRESCI.webp');">
             <div class="teacher-photo" aria-hidden="true"></div>
             <div class="teacher-info">
               <div class="teacher-roles presci">
@@ -370,7 +448,10 @@
     </main>
 
     <footer class="footer">
-      <img src="Image Instagram 1080x1080.jpg" alt="Studio Meraki">
+      <picture>
+        <source srcset="assets/logo.webp" type="image/webp">
+        <img src="Image Instagram 1080x1080.jpg" alt="Logo Studio Meraki" width="64" height="64" loading="lazy">
+      </picture>
       <p>Studio Meraki - La bulle des arts.</p>
       <nav class="footer-legal">
         <a href="mentions-legales.html">Mentions légales</a>
