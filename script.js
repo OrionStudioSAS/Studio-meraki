@@ -20,9 +20,16 @@ menuToggle.addEventListener("click", () => {
 });
 
 nav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (e) => {
     nav.classList.remove("is-open");
     menuToggle.setAttribute("aria-expanded", "false");
+
+    const href = link.getAttribute("href");
+    const target = href && href.startsWith("#") ? document.querySelector(href) : null;
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   });
 });
 
