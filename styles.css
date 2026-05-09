@@ -415,14 +415,26 @@ h3 {
 }
 
 .compagnie-note {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin-top: 40px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  min-height: 280px;
+}
+
+.compagnie-note::before {
+  content: "";
+  background-image: var(--compagnie-image);
+  background-size: cover;
+  background-position: center;
 }
 
 .compagnie-note-inner {
   display: grid;
+  align-content: center;
   gap: 14px;
   padding: clamp(28px, 4vw, 48px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
   background: rgba(255, 255, 255, 0.04);
 }
 
