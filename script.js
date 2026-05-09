@@ -2,7 +2,11 @@
 const heroVideo = document.querySelector(".hero-video");
 if (heroVideo) {
   heroVideo.muted = true;
-  heroVideo.play().catch(() => {});
+  heroVideo.setAttribute("playsinline", "");
+  const tryPlay = () => heroVideo.play().catch(() => {});
+  tryPlay();
+  heroVideo.addEventListener("canplay", tryPlay, { once: true });
+  heroVideo.addEventListener("loadedmetadata", tryPlay, { once: true });
 }
 
 // ── Lenis smooth scroll ───────────────────────────────────────
