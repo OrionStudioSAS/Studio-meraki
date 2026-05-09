@@ -336,29 +336,28 @@ h3 {
   align-items: end;
   min-height: 380px;
   overflow: hidden;
-  isolation: isolate;
   border: 1px solid rgba(255, 255, 255, 0.13);
   background: #0c0c0c;
   transition: transform 260ms ease, border-color 260ms ease;
 }
 
-.course-card::before,
-.course-card::after {
+.course-card > img {
   position: absolute;
   inset: 0;
-  content: "";
-  z-index: -1;
-}
-
-.course-card::before {
-  background-image: var(--course-image);
-  background-position: center;
-  background-size: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
   transform: scale(1.03);
   transition: transform 700ms ease, filter 700ms ease;
 }
 
 .course-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  z-index: 1;
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.38) 38%, rgba(0, 0, 0, 0.88)),
     linear-gradient(90deg, rgba(0, 0, 0, 0.48), transparent 70%);
@@ -369,12 +368,14 @@ h3 {
   border-color: rgba(255, 255, 255, 0.34);
 }
 
-.course-card:hover::before {
+.course-card:hover > img {
   filter: grayscale(0.12) contrast(1.08);
   transform: scale(1.12);
 }
 
 .course-content {
+  position: relative;
+  z-index: 2;
   display: grid;
   align-content: end;
   min-height: 100%;
@@ -425,11 +426,16 @@ h3 {
   min-height: 280px;
 }
 
-.compagnie-note::before {
-  content: "";
-  background-image: var(--compagnie-image);
-  background-size: cover;
-  background-position: center;
+.compagnie-image-wrap {
+  overflow: hidden;
+}
+
+.compagnie-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .compagnie-note-inner {
@@ -462,17 +468,31 @@ h3 {
 }
 
 .teacher-photo {
+  position: relative;
   min-height: 100%;
-  background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.36)),
-    var(--teacher-image);
-  background-position: center;
-  background-size: cover;
+  overflow: hidden;
+}
+
+.teacher-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.36));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.teacher-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
   filter: grayscale(0.12);
   transition: filter 220ms ease, transform 700ms ease;
 }
 
-.teacher-card:hover .teacher-photo {
+.teacher-card:hover .teacher-photo img {
   filter: grayscale(0);
   transform: scale(1.04);
 }
