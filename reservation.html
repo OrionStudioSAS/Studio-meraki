@@ -37,12 +37,10 @@
           <h1>Votre cours d'essai.</h1>
           <p>
             Remplissez la demande pour vous inscrire ou inscrire votre enfant.
-            Les informations pourront être ajustées lors de la confirmation.
+            Les informations pourront être ajustées selon les réservations.
           </p>
           <div class="reservation-facts">
-            <div><strong>5 EUR</strong><span>Le cours d'essai</span></div>
-            <div><strong>2 essais</strong><span>Autorisés par personne</span></div>
-            <div><strong>28/09</strong><span>Inscriptions officielles</span></div>
+            <div><strong>5 €</strong><span>le cours d'essai — profitez de 2 semaines d'essai, du 14 au 28 septembre, pour découvrir les cours avant de confirmer votre inscription.</span></div>
           </div>
         </div>
         <form class="reservation-form reveal" data-reservation-form>
@@ -79,27 +77,63 @@
           </div>
 
           <div class="form-section">
-            <h2>Cours souhaité</h2>
-            <div class="form-grid">
-              <label>
-                Discipline
-                <select name="dance_type" required>
-                  <option value="">Sélectionner une danse</option>
-                  <option>Modern Jazz</option>
-                  <option>Street Jazz</option>
-                  <option>Street Latino</option>
-                  <option>Heels</option>
-                  <option>Comédie musicale</option>
-                  <option>Éveil</option>
-                  <option>Initiation</option>
-                  <option>Glam</option>
-                  <option>Loisirs</option>
-                  <option>Broadway</option>
-                  <option>Technique</option>
-                  <option>Pré-compagnie</option>
-                  <option>Compagnie</option>
-                </select>
+            <h2>Discipline(s) souhaitée(s)</h2>
+            <p class="form-hint">Vous pouvez sélectionner plusieurs disciplines.</p>
+            <div class="discipline-checkboxes">
+              <label class="checkbox-option">
+                <input type="checkbox" name="disciplines" value="Modern">
+                <span>Modern</span>
               </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="disciplines" value="Street">
+                <span>Street</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="disciplines" value="Street Latino">
+                <span>Street Latino</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="disciplines" value="Comédie Musicale">
+                <span>Comédie Musicale</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="disciplines" value="Heels">
+                <span>Heels</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="disciplines" value="Glam">
+                <span>Glam</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="disciplines" value="Broadway">
+                <span>Broadway</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="disciplines" value="Loisirs">
+                <span>Loisirs</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="disciplines" value="Technique">
+                <span>Technique</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="disciplines" value="Éveil (4 ans)">
+                <span>Éveil (4 ans)</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="disciplines" value="Initiation (5-10 ans)">
+                <span>Initiation (5-10 ans)</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="disciplines" value="Pré-compagnie (sur audition)">
+                <span>Pré-compagnie (sur audition)</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="disciplines" value="Compagnie (sur audition)">
+                <span>Compagnie (sur audition)</span>
+              </label>
+            </div>
+            <div class="form-grid" style="margin-top: 16px;">
               <label>
                 Niveau
                 <select name="level" required>
@@ -113,49 +147,50 @@
               <label>
                 Formule
                 <select name="formula" required>
-                  <option>Cours d'essai - 5 EUR</option>
-                  <option>Enfant - 1 cours annuel - 200 EUR</option>
-                  <option>Enfant - 2 cours annuels - 350 EUR</option>
-                  <option>Enfant - 3 cours annuels - 500 EUR</option>
-                  <option>Ado/adulte sans gala - 1 cours - 230 EUR</option>
-                  <option>Ado/adulte sans gala - 2 cours - 410 EUR</option>
-                  <option>Ado/adulte sans gala - 3 cours - 590 EUR</option>
-                  <option>Ado/adulte avec gala - 1 cours - 250 EUR</option>
-                  <option>Ado/adulte avec gala - 2 cours - 450 EUR</option>
-                  <option>Ado/adulte avec gala - 3 cours - 650 EUR</option>
+                  <option value="">Sélectionner une formule</option>
+                  <option>Cours d'essai - 5 €</option>
+                  <option>Enfants/Collège - 1 cours - 200 €/an</option>
+                  <option>Enfants/Collège - 2 cours - 350 €/an</option>
+                  <option>Enfants/Collège - 3 cours - 500 €/an</option>
+                  <option>Lycée/Adultes sans gala - 1 cours - 230 €/an</option>
+                  <option>Lycée/Adultes sans gala - 2 cours - 410 €/an</option>
+                  <option>Lycée/Adultes sans gala - 3 cours - 590 €/an</option>
+                  <option>Lycée/Adultes avec gala - 1 cours - 250 €/an</option>
+                  <option>Lycée/Adultes avec gala - 2 cours - 450 €/an</option>
+                  <option>Lycée/Adultes avec gala - 3 cours - 650 €/an</option>
                 </select>
               </label>
               <label>
                 Créneau préféré
                 <select name="slot" required>
                   <option value="">Choisir un créneau</option>
-                  <option>Lundi - Comédie musicale enfants 10-15 ans - 18:45</option>
-                  <option>Lundi - Comédie musicale ados-adultes 15 ans et + - 19:45</option>
-                  <option>Lundi - Modern Jazz adultes - 21:00</option>
-                  <option>Mardi - Modern Jazz 11-13 ans - 17:00</option>
-                  <option>Mardi - Modern Jazz 13-15 ans - 18:00</option>
-                  <option>Mardi - Modern Jazz 15-18 ans - 19:00</option>
-                  <option>Mardi - Loisirs ados-adultes 15 ans et + - 20:15</option>
+                  <option>Lundi - Comédie Musicale enfants 10-15 ans - 18:45</option>
+                  <option>Lundi - Comédie Musicale ados/adultes 15 ans et + - 19:45</option>
+                  <option>Lundi - Modern adultes - 21:00</option>
+                  <option>Mardi - Modern ados 11-13 ans - 17:00</option>
+                  <option>Mardi - Modern ados 13-15 ans - 18:00</option>
+                  <option>Mardi - Modern ados 15-18 ans - 19:00</option>
+                  <option>Mardi - Loisirs ados/adultes 15 ans et + - 20:15</option>
                   <option>Mercredi - Éveil 4 ans - 10:30</option>
                   <option>Mercredi - Initiation 5-6 ans - 11:30</option>
                   <option>Mercredi - Initiation 6-7 ans - 13:15</option>
                   <option>Mercredi - Initiation 7-8 ans - 14:15</option>
                   <option>Mercredi - Initiation 9-10 ans - 15:15</option>
-                  <option>Mercredi - Street Jazz enfants - 16:15</option>
-                  <option>Mercredi - Modern Jazz 15-18 ans - 17:15</option>
-                  <option>Mercredi - Street Jazz 15-18 ans - 18:30</option>
-                  <option>Mercredi - Street Jazz adultes - 19:45</option>
+                  <option>Mercredi - Street enfants - 16:15</option>
+                  <option>Mercredi - Modern ados 15-18 ans - 17:15</option>
+                  <option>Mercredi - Street ados 15-18 ans - 18:30</option>
+                  <option>Mercredi - Street adultes - 19:45</option>
                   <option>Mercredi - Heels adultes - 21:00</option>
-                  <option>Jeudi - Street Jazz 11-13 ans - 17:30</option>
-                  <option>Jeudi - Street Latino ados-adultes 15 ans et + - 18:30</option>
+                  <option>Jeudi - Street ados 11-13 ans - 17:30</option>
+                  <option>Jeudi - Street Latino ados/adultes 15 ans et + - 18:30</option>
                   <option>Jeudi - Glam adultes - 19:45</option>
                   <option>Jeudi - Heels adultes - 21:00</option>
-                  <option>Vendredi - Street Jazz 13-15 ans - 17:30</option>
-                  <option>Vendredi - Street Jazz adultes - 18:30</option>
-                  <option>Vendredi - Broadway ados-adultes 15 ans et + - 19:45</option>
-                  <option>Vendredi - Modern Jazz adultes - 21:00</option>
+                  <option>Vendredi - Street ados 13-15 ans - 17:30</option>
+                  <option>Vendredi - Street adultes - 18:30</option>
+                  <option>Vendredi - Broadway ados/adultes 15 ans et + - 19:45</option>
+                  <option>Vendredi - Modern adultes - 21:00</option>
                   <option>Samedi - Pré-compagnie - 13:45</option>
-                  <option>Samedi - Technique ados-adultes 15 ans et + - 14:45</option>
+                  <option>Samedi - Technique ados/adultes 15 ans et + - 14:45</option>
                   <option>Samedi - Compagnie - 16:00</option>
                 </select>
               </label>
@@ -178,15 +213,15 @@
               Modalité de paiement envisagée
               <select name="payment">
                 <option>À définir ensemble</option>
-                <option>Espèces - 1 versement</option>
+                <option>Espèces - sur place, 1 versement</option>
                 <option>Chèques - jusqu'à 4 chèques</option>
+                <option>Carte bancaire - via HelloAsso ou sur place, 1 versement</option>
                 <option>Prélèvement bancaire - jusqu'à 4 fois</option>
-                <option>Prélèvement trimestriel - 3 fois</option>
               </select>
             </label>
             <label>
               Message
-              <textarea name="message" rows="4" placeholder="Besoin particulier, disponibilités, question, lien familial pour remise..."></textarea>
+              <textarea name="message" rows="4" placeholder="Besoin particulier, question, lien familial pour remise, ou si vous souhaitez plus de 3 cours, précisez-le ici…"></textarea>
             </label>
           </div>
 
