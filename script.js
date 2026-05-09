@@ -1,3 +1,17 @@
+// ── Lenis smooth scroll ───────────────────────────────────────
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  smooth: true,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+// ── Ancres nav → scroll Lenis ────────────────────────────────
 const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
@@ -28,11 +42,12 @@ nav.querySelectorAll("a").forEach((link) => {
     const target = href && href.startsWith("#") ? document.querySelector(href) : null;
     if (target) {
       e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      lenis.scrollTo(target, { offset: -80 });
     }
   });
 });
 
+// ── Reveal on scroll ─────────────────────────────────────────
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -47,11 +62,9 @@ const observer = new IntersectionObserver(
 
 revealItems.forEach((item) => observer.observe(item));
 
+// ── Formulaire réservation ───────────────────────────────────
 const syncGuardianField = () => {
-  if (!guardianField) {
-    return;
-  }
-
+  if (!guardianField) return;
   const selected = document.querySelector("[data-participant-option]:checked");
   const needsGuardian = selected && selected.value !== "adulte";
   guardianField.classList.toggle("is-hidden", !needsGuardian);
