@@ -1298,6 +1298,7 @@ textarea {
   margin-bottom: 28px;
   color: var(--black);
   font-size: clamp(3.4rem, 8vw, 7.6rem);
+  line-height: 1.05;
 }
 
 .reservation-intro p {
