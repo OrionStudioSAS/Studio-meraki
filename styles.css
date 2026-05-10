@@ -1206,19 +1206,18 @@ textarea {
 
 .footer-credit {
   font-size: 0.82rem;
-  opacity: 0.45;
+  color: rgba(255, 255, 255, 0.5);
   margin: 0;
 }
 
 .footer-credit a {
   color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: opacity 0.18s;
+  text-decoration: none;
+  transition: color 180ms ease;
 }
 
 .footer-credit a:hover {
-  opacity: 1;
+  color: #fff;
 }
 
 /* ── Pages légales ───────────────────────────────────────────── */
