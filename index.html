@@ -421,20 +421,25 @@
             <p class="section-kicker">Nous contacter</p>
             <h2>Envie de rejoindre la bulle ?</h2>
           </div>
-          <form>
+          <form data-contact-form>
+            <input type="hidden" name="access_key" value="8e8f6cb1-5e11-4993-8664-275f53d3d586">
+            <input type="hidden" name="subject" value="Nouveau message — Studio Meraki">
+            <input type="hidden" name="from_name" value="Studio Meraki Site Web">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
             <label>
               Nom
-              <input type="text" name="name" placeholder="Votre nom">
+              <input type="text" name="name" placeholder="Votre nom" required>
             </label>
             <label>
               Email
-              <input type="email" name="email" placeholder="vous@email.com">
+              <input type="email" name="email" placeholder="vous@email.com" required>
             </label>
             <label>
               Message
-              <textarea name="message" rows="4" placeholder="Confiez-nous votre demande."></textarea>
+              <textarea name="message" rows="4" placeholder="Confiez-nous votre demande." required></textarea>
             </label>
             <button class="button button-dark" type="submit">Envoyer</button>
+            <p class="form-confirmation" data-contact-confirmation aria-live="polite"></p>
           </form>
         </div>
       </section>

@@ -106,11 +106,66 @@ participantOptions.forEach((option) => {
 
 syncGuardianField();
 
+// ── Soumission formulaire contact ────────────────────────────
+const contactForm = document.querySelector("[data-contact-form]");
+const contactConfirmation = document.querySelector("[data-contact-confirmation]");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = contactForm.querySelector("[type=submit]");
+    btn.disabled = true;
+    btn.textContent = "Envoi…";
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: new FormData(contactForm),
+      });
+      const json = await res.json();
+      if (json.success) {
+        contactConfirmation.textContent = "✓ Message envoyé ! Nous vous répondrons très vite.";
+        contactConfirmation.style.color = "#4caf82";
+        contactForm.reset();
+      } else {
+        contactConfirmation.textContent = "Une erreur est survenue. Merci de réessayer ou d'écrire directement à mail.studiomeraki@gmail.com";
+        contactConfirmation.style.color = "#e57373";
+      }
+    } catch {
+      contactConfirmation.textContent = "Une erreur est survenue. Merci de réessayer.";
+      contactConfirmation.style.color = "#e57373";
+    }
+    btn.disabled = false;
+    btn.textContent = "Envoyer";
+  });
+}
+
+// ── Soumission formulaire réservation ────────────────────────
 if (reservationForm) {
-  reservationForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    formConfirmation.textContent = "Merci, votre demande est prête à être confirmée par le studio.";
-    reservationForm.reset();
-    syncGuardianField();
+  reservationForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = reservationForm.querySelector("[type=submit]");
+    btn.disabled = true;
+    btn.textContent = "Envoi…";
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: new FormData(reservationForm),
+      });
+      const json = await res.json();
+      if (json.success) {
+        formConfirmation.textContent = "✓ Demande envoyée ! Nous vous recontactons rapidement pour confirmer.";
+        formConfirmation.style.color = "#4caf82";
+        reservationForm.reset();
+        syncGuardianField();
+      } else {
+        formConfirmation.textContent = "Une erreur est survenue. Merci de réessayer ou d'écrire à mail.studiomeraki@gmail.com";
+        formConfirmation.style.color = "#e57373";
+      }
+    } catch {
+      formConfirmation.textContent = "Une erreur est survenue. Merci de réessayer.";
+      formConfirmation.style.color = "#e57373";
+    }
+    btn.disabled = false;
+    btn.textContent = "Envoyer la demande";
   });
 }
