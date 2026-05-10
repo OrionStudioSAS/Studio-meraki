@@ -93,6 +93,7 @@ revealItems.forEach((item) => observer.observe(item));
 
 // ── Créneaux dynamiques (filtrage par discipline) ────────────
 const slotsSection = document.getElementById("slots-section");
+const slotsEmptyHint = document.getElementById("slots-empty-hint");
 const disciplineCheckboxes = document.querySelectorAll('[name="disciplines"]');
 const slotGroups = document.querySelectorAll("[data-slot-group]");
 
@@ -104,7 +105,7 @@ const syncSlots = () => {
   let anyVisible = false;
   slotGroups.forEach((group) => {
     const visible = selected.has(group.dataset.slotGroup);
-    group.hidden = !visible;
+    group.style.display = visible ? "" : "none";
     if (!visible) {
       group.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
         cb.checked = false;
@@ -113,7 +114,7 @@ const syncSlots = () => {
     if (visible) anyVisible = true;
   });
 
-  if (slotsSection) slotsSection.hidden = !anyVisible;
+  if (slotsEmptyHint) slotsEmptyHint.style.display = anyVisible ? "none" : "";
 };
 
 disciplineCheckboxes.forEach((cb) => cb.addEventListener("change", syncSlots));
