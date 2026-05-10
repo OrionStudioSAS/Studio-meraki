@@ -174,38 +174,100 @@
             </div>
           </div>
 
-          <div class="form-section">
+          <div class="form-section" id="slots-section" hidden>
             <h2>Créneau(x) préféré(s)</h2>
-            <p class="form-hint">Vous pouvez sélectionner plusieurs créneaux.</p>
-            <div class="discipline-checkboxes">
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Lundi - Comédie Musicale enfants 10-15 ans - 18:45"><span>Lun · Comédie Musicale enfants 10-15 ans · 18:45</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Lundi - Comédie Musicale ados/adultes 15 ans et + - 19:45"><span>Lun · Comédie Musicale ados/adultes 15+ · 19:45</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Lundi - Modern adultes - 21:00"><span>Lun · Modern adultes · 21:00</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mardi - Modern ados 11-13 ans - 17:00"><span>Mar · Modern ados 11-13 ans · 17:00</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mardi - Modern ados 13-15 ans - 18:00"><span>Mar · Modern ados 13-15 ans · 18:00</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mardi - Modern ados 15-18 ans - 19:00"><span>Mar · Modern ados 15-18 ans · 19:00</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mardi - Loisirs ados/adultes 15 ans et + - 20:15"><span>Mar · Loisirs ados/adultes 15+ · 20:15</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Éveil 4 ans - 10:30"><span>Mer · Éveil 4 ans · 10:30</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Initiation 5-6 ans - 11:30"><span>Mer · Initiation 5-6 ans · 11:30</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Initiation 6-7 ans - 13:15"><span>Mer · Initiation 6-7 ans · 13:15</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Initiation 7-8 ans - 14:15"><span>Mer · Initiation 7-8 ans · 14:15</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Initiation 9-10 ans - 15:15"><span>Mer · Initiation 9-10 ans · 15:15</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Street enfants - 16:15"><span>Mer · Street enfants · 16:15</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Modern ados 15-18 ans - 17:15"><span>Mer · Modern ados 15-18 ans · 17:15</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Street ados 15-18 ans - 18:30"><span>Mer · Street ados 15-18 ans · 18:30</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Street adultes - 19:45"><span>Mer · Street adultes · 19:45</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Heels adultes - 21:00"><span>Mer · Heels adultes · 21:00</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Jeudi - Street ados 11-13 ans - 17:30"><span>Jeu · Street ados 11-13 ans · 17:30</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Jeudi - Street Latino ados/adultes 15 ans et + - 18:30"><span>Jeu · Street Latino ados/adultes 15+ · 18:30</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Jeudi - Glam adultes - 19:45"><span>Jeu · Glam adultes · 19:45</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Jeudi - Heels adultes - 21:00"><span>Jeu · Heels adultes · 21:00</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Vendredi - Street ados 13-15 ans - 17:30"><span>Ven · Street ados 13-15 ans · 17:30</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Vendredi - Street adultes - 18:30"><span>Ven · Street adultes · 18:30</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Vendredi - Broadway ados/adultes 15 ans et + - 19:45"><span>Ven · Broadway ados/adultes 15+ · 19:45</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Vendredi - Modern adultes - 21:00"><span>Ven · Modern adultes · 21:00</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Samedi - Pré-compagnie - 13:45"><span>Sam · Pré-compagnie · 13:45</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Samedi - Technique ados/adultes 15 ans et + - 14:45"><span>Sam · Technique ados/adultes 15+ · 14:45</span></label>
-              <label class="checkbox-option"><input type="checkbox" name="slots" value="Samedi - Compagnie - 16:00"><span>Sam · Compagnie · 16:00</span></label>
+            <p class="form-hint">Sélectionnez vos créneaux parmi les disciplines choisies ci-dessus.</p>
+
+            <div class="slot-group" data-slot-group="Modern" hidden>
+              <p class="slot-group-label">Modern</p>
+              <div class="discipline-checkboxes">
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Lundi - Modern adultes - 21:00"><span>Lun · Modern adultes · 21:00</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Mardi - Modern ados 11-13 ans - 17:00"><span>Mar · Modern ados 11-13 ans · 17:00</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Mardi - Modern ados 13-15 ans - 18:00"><span>Mar · Modern ados 13-15 ans · 18:00</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Mardi - Modern ados 15-18 ans - 19:00"><span>Mar · Modern ados 15-18 ans · 19:00</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Modern ados 15-18 ans - 17:15"><span>Mer · Modern ados 15-18 ans · 17:15</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Vendredi - Modern adultes - 21:00"><span>Ven · Modern adultes · 21:00</span></label>
+              </div>
+            </div>
+
+            <div class="slot-group" data-slot-group="Street" hidden>
+              <p class="slot-group-label">Street</p>
+              <div class="discipline-checkboxes">
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Street enfants - 16:15"><span>Mer · Street enfants · 16:15</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Street ados 15-18 ans - 18:30"><span>Mer · Street ados 15-18 ans · 18:30</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Street adultes - 19:45"><span>Mer · Street adultes · 19:45</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Jeudi - Street ados 11-13 ans - 17:30"><span>Jeu · Street ados 11-13 ans · 17:30</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Vendredi - Street ados 13-15 ans - 17:30"><span>Ven · Street ados 13-15 ans · 17:30</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Vendredi - Street adultes - 18:30"><span>Ven · Street adultes · 18:30</span></label>
+              </div>
+            </div>
+
+            <div class="slot-group" data-slot-group="Street Latino" hidden>
+              <p class="slot-group-label">Street Latino</p>
+              <div class="discipline-checkboxes">
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Jeudi - Street Latino ados/adultes 15 ans et + - 18:30"><span>Jeu · Street Latino ados/adultes 15+ · 18:30</span></label>
+              </div>
+            </div>
+
+            <div class="slot-group" data-slot-group="Comédie Musicale" hidden>
+              <p class="slot-group-label">Comédie Musicale</p>
+              <div class="discipline-checkboxes">
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Lundi - Comédie Musicale enfants 10-15 ans - 18:45"><span>Lun · Comédie Musicale enfants 10-15 ans · 18:45</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Lundi - Comédie Musicale ados/adultes 15 ans et + - 19:45"><span>Lun · Comédie Musicale ados/adultes 15+ · 19:45</span></label>
+              </div>
+            </div>
+
+            <div class="slot-group" data-slot-group="Heels" hidden>
+              <p class="slot-group-label">Heels</p>
+              <div class="discipline-checkboxes">
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Heels adultes - 21:00"><span>Mer · Heels adultes · 21:00</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Jeudi - Heels adultes - 21:00"><span>Jeu · Heels adultes · 21:00</span></label>
+              </div>
+            </div>
+
+            <div class="slot-group" data-slot-group="Glam" hidden>
+              <p class="slot-group-label">Glam</p>
+              <div class="discipline-checkboxes">
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Jeudi - Glam adultes - 19:45"><span>Jeu · Glam adultes · 19:45</span></label>
+              </div>
+            </div>
+
+            <div class="slot-group" data-slot-group="Broadway" hidden>
+              <p class="slot-group-label">Broadway</p>
+              <div class="discipline-checkboxes">
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Vendredi - Broadway ados/adultes 15 ans et + - 19:45"><span>Ven · Broadway ados/adultes 15+ · 19:45</span></label>
+              </div>
+            </div>
+
+            <div class="slot-group" data-slot-group="Loisirs" hidden>
+              <p class="slot-group-label">Loisirs</p>
+              <div class="discipline-checkboxes">
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Mardi - Loisirs ados/adultes 15 ans et + - 20:15"><span>Mar · Loisirs ados/adultes 15+ · 20:15</span></label>
+              </div>
+            </div>
+
+            <div class="slot-group" data-slot-group="Technique" hidden>
+              <p class="slot-group-label">Technique</p>
+              <div class="discipline-checkboxes">
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Samedi - Technique ados/adultes 15 ans et + - 14:45"><span>Sam · Technique ados/adultes 15+ · 14:45</span></label>
+              </div>
+            </div>
+
+            <div class="slot-group" data-slot-group="Éveil (4 ans)" hidden>
+              <p class="slot-group-label">Éveil</p>
+              <div class="discipline-checkboxes">
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Éveil 4 ans - 10:30"><span>Mer · Éveil 4 ans · 10:30</span></label>
+              </div>
+            </div>
+
+            <div class="slot-group" data-slot-group="Initiation (5-10 ans)" hidden>
+              <p class="slot-group-label">Initiation</p>
+              <div class="discipline-checkboxes">
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Initiation 5-6 ans - 11:30"><span>Mer · Initiation 5-6 ans · 11:30</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Initiation 6-7 ans - 13:15"><span>Mer · Initiation 6-7 ans · 13:15</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Initiation 7-8 ans - 14:15"><span>Mer · Initiation 7-8 ans · 14:15</span></label>
+                <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Initiation 9-10 ans - 15:15"><span>Mer · Initiation 9-10 ans · 15:15</span></label>
+              </div>
             </div>
           </div>
 

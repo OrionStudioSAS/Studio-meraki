@@ -91,6 +91,34 @@ const observer = new IntersectionObserver(
 
 revealItems.forEach((item) => observer.observe(item));
 
+// ── Créneaux dynamiques (filtrage par discipline) ────────────
+const slotsSection = document.getElementById("slots-section");
+const disciplineCheckboxes = document.querySelectorAll('[name="disciplines"]');
+const slotGroups = document.querySelectorAll("[data-slot-group]");
+
+const syncSlots = () => {
+  const selected = new Set(
+    [...disciplineCheckboxes].filter((cb) => cb.checked).map((cb) => cb.value)
+  );
+
+  let anyVisible = false;
+  slotGroups.forEach((group) => {
+    const visible = selected.has(group.dataset.slotGroup);
+    group.hidden = !visible;
+    if (!visible) {
+      group.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
+        cb.checked = false;
+      });
+    }
+    if (visible) anyVisible = true;
+  });
+
+  if (slotsSection) slotsSection.hidden = !anyVisible;
+};
+
+disciplineCheckboxes.forEach((cb) => cb.addEventListener("change", syncSlots));
+syncSlots();
+
 // ── Formulaire réservation ───────────────────────────────────
 const syncGuardianField = () => {
   if (!guardianField) return;

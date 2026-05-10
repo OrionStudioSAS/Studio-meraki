@@ -1489,6 +1489,25 @@ textarea {
   gap: 8px;
 }
 
+.slot-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.slot-group + .slot-group {
+  margin-top: 20px;
+}
+
+.slot-group-label {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.4);
+}
+
 .checkbox-option {
   display: flex;
   align-items: center;
