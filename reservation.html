@@ -143,14 +143,6 @@
                 <input type="checkbox" name="disciplines" value="Initiation (5-10 ans)">
                 <span>Initiation (5-10 ans)</span>
               </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="disciplines" value="Pré-compagnie (sur audition)">
-                <span>Pré-compagnie (sur audition)</span>
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="disciplines" value="Compagnie (sur audition)">
-                <span>Compagnie (sur audition)</span>
-              </label>
             </div>
             <div class="form-grid" style="margin-top: 16px;">
               <label>
@@ -179,40 +171,41 @@
                   <option>Lycée/Adultes avec gala - 3 cours - 650 €/an</option>
                 </select>
               </label>
-              <label>
-                Créneau préféré
-                <select name="slot" required>
-                  <option value="">Choisir un créneau</option>
-                  <option>Lundi - Comédie Musicale enfants 10-15 ans - 18:45</option>
-                  <option>Lundi - Comédie Musicale ados/adultes 15 ans et + - 19:45</option>
-                  <option>Lundi - Modern adultes - 21:00</option>
-                  <option>Mardi - Modern ados 11-13 ans - 17:00</option>
-                  <option>Mardi - Modern ados 13-15 ans - 18:00</option>
-                  <option>Mardi - Modern ados 15-18 ans - 19:00</option>
-                  <option>Mardi - Loisirs ados/adultes 15 ans et + - 20:15</option>
-                  <option>Mercredi - Éveil 4 ans - 10:30</option>
-                  <option>Mercredi - Initiation 5-6 ans - 11:30</option>
-                  <option>Mercredi - Initiation 6-7 ans - 13:15</option>
-                  <option>Mercredi - Initiation 7-8 ans - 14:15</option>
-                  <option>Mercredi - Initiation 9-10 ans - 15:15</option>
-                  <option>Mercredi - Street enfants - 16:15</option>
-                  <option>Mercredi - Modern ados 15-18 ans - 17:15</option>
-                  <option>Mercredi - Street ados 15-18 ans - 18:30</option>
-                  <option>Mercredi - Street adultes - 19:45</option>
-                  <option>Mercredi - Heels adultes - 21:00</option>
-                  <option>Jeudi - Street ados 11-13 ans - 17:30</option>
-                  <option>Jeudi - Street Latino ados/adultes 15 ans et + - 18:30</option>
-                  <option>Jeudi - Glam adultes - 19:45</option>
-                  <option>Jeudi - Heels adultes - 21:00</option>
-                  <option>Vendredi - Street ados 13-15 ans - 17:30</option>
-                  <option>Vendredi - Street adultes - 18:30</option>
-                  <option>Vendredi - Broadway ados/adultes 15 ans et + - 19:45</option>
-                  <option>Vendredi - Modern adultes - 21:00</option>
-                  <option>Samedi - Pré-compagnie - 13:45</option>
-                  <option>Samedi - Technique ados/adultes 15 ans et + - 14:45</option>
-                  <option>Samedi - Compagnie - 16:00</option>
-                </select>
-              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Créneau(x) préféré(s)</h2>
+            <p class="form-hint">Vous pouvez sélectionner plusieurs créneaux.</p>
+            <div class="discipline-checkboxes">
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Lundi - Comédie Musicale enfants 10-15 ans - 18:45"><span>Lun · Comédie Musicale enfants 10-15 ans · 18:45</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Lundi - Comédie Musicale ados/adultes 15 ans et + - 19:45"><span>Lun · Comédie Musicale ados/adultes 15+ · 19:45</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Lundi - Modern adultes - 21:00"><span>Lun · Modern adultes · 21:00</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mardi - Modern ados 11-13 ans - 17:00"><span>Mar · Modern ados 11-13 ans · 17:00</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mardi - Modern ados 13-15 ans - 18:00"><span>Mar · Modern ados 13-15 ans · 18:00</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mardi - Modern ados 15-18 ans - 19:00"><span>Mar · Modern ados 15-18 ans · 19:00</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mardi - Loisirs ados/adultes 15 ans et + - 20:15"><span>Mar · Loisirs ados/adultes 15+ · 20:15</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Éveil 4 ans - 10:30"><span>Mer · Éveil 4 ans · 10:30</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Initiation 5-6 ans - 11:30"><span>Mer · Initiation 5-6 ans · 11:30</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Initiation 6-7 ans - 13:15"><span>Mer · Initiation 6-7 ans · 13:15</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Initiation 7-8 ans - 14:15"><span>Mer · Initiation 7-8 ans · 14:15</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Initiation 9-10 ans - 15:15"><span>Mer · Initiation 9-10 ans · 15:15</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Street enfants - 16:15"><span>Mer · Street enfants · 16:15</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Modern ados 15-18 ans - 17:15"><span>Mer · Modern ados 15-18 ans · 17:15</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Street ados 15-18 ans - 18:30"><span>Mer · Street ados 15-18 ans · 18:30</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Street adultes - 19:45"><span>Mer · Street adultes · 19:45</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Mercredi - Heels adultes - 21:00"><span>Mer · Heels adultes · 21:00</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Jeudi - Street ados 11-13 ans - 17:30"><span>Jeu · Street ados 11-13 ans · 17:30</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Jeudi - Street Latino ados/adultes 15 ans et + - 18:30"><span>Jeu · Street Latino ados/adultes 15+ · 18:30</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Jeudi - Glam adultes - 19:45"><span>Jeu · Glam adultes · 19:45</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Jeudi - Heels adultes - 21:00"><span>Jeu · Heels adultes · 21:00</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Vendredi - Street ados 13-15 ans - 17:30"><span>Ven · Street ados 13-15 ans · 17:30</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Vendredi - Street adultes - 18:30"><span>Ven · Street adultes · 18:30</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Vendredi - Broadway ados/adultes 15 ans et + - 19:45"><span>Ven · Broadway ados/adultes 15+ · 19:45</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Vendredi - Modern adultes - 21:00"><span>Ven · Modern adultes · 21:00</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Samedi - Pré-compagnie - 13:45"><span>Sam · Pré-compagnie · 13:45</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Samedi - Technique ados/adultes 15 ans et + - 14:45"><span>Sam · Technique ados/adultes 15+ · 14:45</span></label>
+              <label class="checkbox-option"><input type="checkbox" name="slots" value="Samedi - Compagnie - 16:00"><span>Sam · Compagnie · 16:00</span></label>
             </div>
           </div>
 
@@ -240,10 +233,11 @@
             </label>
             <label>
               Message
-              <textarea name="message" rows="4" placeholder="Besoin particulier, question, lien familial pour remise, ou si vous souhaitez plus de 3 cours, précisez-le ici…"></textarea>
+              <textarea name="message" rows="4" placeholder="Besoin particulier, problèmes médicaux, question, lien familial pour remise, ou si vous souhaitez plus de 3 cours, précisez-le ici…"></textarea>
             </label>
           </div>
 
+          <p class="form-hint" style="margin-bottom: 8px;">En vous inscrivant, vous acceptez notre <a href="assets/reglement_interieur.pdf" target="_blank" rel="noopener noreferrer">règlement intérieur</a>.</p>
           <label class="consent">
             <input type="checkbox" name="consent" required>
             <span>J'accepte d'être recontacté pour finaliser ma réservation.</span>

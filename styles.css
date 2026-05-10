@@ -459,6 +459,19 @@ h3 {
   line-height: 1.7;
 }
 
+.compagnie-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.9) !important;
+  line-height: 1.4 !important;
+}
+
 .teacher-card {
   display: grid;
   grid-template-columns: minmax(210px, 0.78fr) minmax(0, 1fr);
@@ -916,11 +929,21 @@ h3 {
   font-weight: 800;
 }
 
+.pricing-savoir {
+  margin-top: 40px;
+  margin-bottom: 4px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+}
+
 .pricing-notes {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
-  margin-top: 18px;
+  margin-top: 0;
 }
 
 .pricing-notes div {
