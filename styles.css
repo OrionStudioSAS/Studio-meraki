@@ -1595,6 +1595,16 @@ textarea {
   margin-top: 4px;
 }
 
+.consent a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.consent a:hover {
+  color: var(--ink);
+}
+
 .form-confirmation {
   min-height: 24px;
   margin: 0;
