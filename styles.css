@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap");
+
 :root {
   --black: #050505;
   --ink: #101010;
@@ -413,8 +415,8 @@ h3 {
 
 .teacher-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: 1fr;
+  gap: clamp(48px, 7vw, 80px);
 }
 
 .compagnie-note {
@@ -473,33 +475,51 @@ h3 {
 }
 
 .teacher-card {
-  display: grid;
-  grid-template-columns: minmax(210px, 0.78fr) minmax(0, 1fr);
-  min-height: 420px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.06);
-  transition: transform 220ms ease, border-color 220ms ease;
+  display: flex;
+  align-items: center;
+  gap: clamp(32px, 6vw, 72px);
+  min-height: auto;
+  overflow: visible;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: clamp(48px, 6vw, 72px);
+}
+
+.teacher-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.teacher-card--reversed {
+  flex-direction: row-reverse;
 }
 
 .teacher-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(255, 255, 255, 0.32);
+  transform: none;
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .teacher-photo {
   position: relative;
-  min-height: 100%;
+  width: clamp(160px, 20vw, 230px);
+  height: clamp(160px, 20vw, 230px);
+  min-width: clamp(160px, 20vw, 230px);
+  border-radius: 50%;
   overflow: hidden;
+  flex-shrink: 0;
+}
+
+.teacher-card:first-child .teacher-photo {
+  box-shadow: 0 0 0 5px var(--black), 0 0 0 10px #ef7786;
+}
+
+.teacher-card:last-child .teacher-photo {
+  box-shadow: 0 0 0 5px var(--black), 0 0 0 10px #f6c84f;
 }
 
 .teacher-photo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.36));
-  z-index: 1;
-  pointer-events: none;
+  display: none;
 }
 
 .teacher-photo img {
@@ -508,23 +528,20 @@ h3 {
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  filter: grayscale(0.12);
-  transition: filter 220ms ease, transform 700ms ease;
+  border-radius: 50%;
+  transition: transform 500ms ease;
 }
 
 .teacher-card:hover .teacher-photo img {
-  filter: grayscale(0);
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .teacher-info {
   display: grid;
   align-content: start;
-  gap: 12px;
-  padding: clamp(28px, 4vw, 48px);
-  background:
-    radial-gradient(circle at 88% 16%, rgba(255, 255, 255, 0.16), transparent 26%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+  gap: 14px;
+  padding: 0;
+  background: transparent;
 }
 
 .teacher-dot {
@@ -552,24 +569,36 @@ h3 {
 
 .teacher-roles {
   display: grid;
-  gap: 4px;
+  gap: 2px;
 }
 
 .teacher-roles span {
   display: block;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  font-family: "Caveat", cursive;
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  font-weight: 600;
+  letter-spacing: 0;
   line-height: 1.3;
-  text-transform: uppercase;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.78);
 }
 
-.teacher-roles.laura span {
-  color: #ef7786;
-}
-
+.teacher-roles.laura span,
 .teacher-roles.presci span {
-  color: #f6c84f;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* ── Mot accent "bimbo" (dégradé rose→jaune, Caveat) ────────── */
+.bimbo {
+  font-family: "Caveat", cursive;
+  font-size: 1.22em;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-block;
+  background: linear-gradient(90deg, #ff9fbc 0%, #f6c84f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .teachers-intro {
@@ -582,25 +611,32 @@ h3 {
 }
 
 .laura-name {
-  color: #ef7786;
   font-family: "Fredoka", "Arial Rounded MT Bold", Arial, sans-serif;
-  font-size: clamp(2rem, 4.5vw, 4rem);
-  line-height: 0.9;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1;
+  margin: 0;
+  background: linear-gradient(120deg, #ff6b9d 0%, #c9325e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .presci-name {
-  color: #f6c84f;
   font-family: "Fredoka", "Arial Rounded MT Bold", Arial, sans-serif;
-  font-size: clamp(2rem, 4.5vw, 4rem);
-  line-height: 0.9;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1;
+  margin: 0;
+  background: linear-gradient(120deg, #f6c84f 0%, #e89a00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .teacher-info small {
-  max-width: 520px;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.88rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .opening {
@@ -1812,13 +1848,18 @@ textarea {
     font-size: clamp(2.7rem, 14vw, 4.2rem);
   }
 
-  .teacher-card {
-    grid-template-columns: 1fr;
-    min-height: 260px;
+  .teacher-card,
+  .teacher-card--reversed {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding-bottom: 48px;
   }
 
   .teacher-photo {
-    min-height: 340px;
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
   }
 
   .footer-bottom {
@@ -1859,7 +1900,9 @@ textarea {
   }
 
   .teacher-photo {
-    min-height: 300px;
+    width: 130px;
+    height: 130px;
+    min-width: 130px;
   }
 
   .pricing-title,
