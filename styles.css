@@ -1642,6 +1642,12 @@ textarea {
     padding: 12px 18px;
   }
 
+  /* Figer la hauteur du header au scroll sur mobile — évite que le burger "remonte" */
+  .site-header.is-scrolled {
+    padding-block: 12px;
+    backdrop-filter: none;
+  }
+
   .brand {
     width: 62px;
     height: 62px;
@@ -1654,34 +1660,41 @@ textarea {
   .menu-toggle {
     position: relative;
     z-index: 22;
-    display: grid;
-    place-items: center;
-    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     width: 46px;
     height: 46px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.42);
+    flex-shrink: 0;
   }
 
   .menu-toggle span {
+    display: block;
     width: 18px;
     height: 2px;
     background: var(--white);
+    border-radius: 2px;
   }
 
   .nav {
     position: fixed;
     inset: 0;
+    z-index: 19;
     display: grid;
     place-content: center;
     gap: 24px;
-    background: rgba(0, 0, 0, 0.94);
+    background: rgba(0, 0, 0, 0.96);
+    backdrop-filter: blur(12px);
     font-size: 1rem;
     opacity: 0;
     pointer-events: none;
     transform: translateY(-12px);
-    transition: opacity 200ms ease, transform 200ms ease;
+    transition: opacity 220ms ease, transform 220ms ease;
   }
 
   .nav.is-open {
@@ -1754,6 +1767,15 @@ textarea {
 
   .segmented-control {
     grid-template-columns: 1fr;
+  }
+
+  /* Compagnie note : empiler image + texte verticalement */
+  .compagnie-note {
+    grid-template-columns: 1fr;
+  }
+
+  .compagnie-image-wrap {
+    min-height: 240px;
   }
 }
 
