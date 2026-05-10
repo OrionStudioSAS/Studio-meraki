@@ -105,7 +105,7 @@ const syncSlots = () => {
   let anyVisible = false;
   slotGroups.forEach((group) => {
     const visible = selected.has(group.dataset.slotGroup);
-    group.style.display = visible ? "" : "none";
+    group.style.display = visible ? "flex" : "none";
     if (!visible) {
       group.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
         cb.checked = false;
